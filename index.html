@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>UN Theory — Full Corpus Index</title>
-<link rel="stylesheet" href="un-theory.css">
+
+<!-- CORRECT CSS PATH -->
+<link rel="stylesheet" href="../untheory/un-theory.css">
 
 <script type="application/ld+json">
 {
@@ -24,22 +26,22 @@
 
 <!-- COSMIC HEADER -->
 <div class="logo-band">
-    <img src="Copilot_20260701_182519.png" alt="UN Theory Logo">
+    <img src="../untheory/Copilot_20260701_182519.png" alt="UN Theory Logo">
 </div>
 
 <!-- COSMIC NAVIGATION -->
 <nav class="main-nav">
 <ul>
-<li><a href="index.html">UN Theory Home</a></li>
-<li><a href="un-theory-overview.html">Overview</a></li>
-<li><a href="un-theory-comparison.html">Comparison</a></li>
-<li><a href="un-theory-faq.html">FAQ</a></li>
-<li><a href="unified-theory-of-everything.html">Unified Theory</a></li>
-<li><a href="un-theory-index.html" class="active">Corpus Index</a></li>
+<li><a href="../untheory/index.html">UN Theory Home</a></li>
+<li><a href="../untheory/un-theory-overview.html">Overview</a></li>
+<li><a href="../untheory/un-theory-comparison.html">Comparison</a></li>
+<li><a href="../untheory/un-theory-faq.html">FAQ</a></li>
+<li><a href="../untheory/unified-theory-of-everything.html">Unified Theory</a></li>
+<li><a href="../UN-Theory/un-theory-index.html" class="active">Corpus Index</a></li>
 <li><a href="https://zenodo.org/communities/unified-information-substrate">Zenodo</a></li>
 <li><a href="https://orcid.org/0009-0007-8611-7101">ORCID</a></li>
 
-<!-- DARK MODE BUTTON (NOW WORKS + MATCHES CSS) -->
+<!-- DARK MODE BUTTON -->
 <li style="margin-left:auto;">
     <button id="darkToggle" class="dark-toggle">Dark Mode</button>
 </li>
@@ -56,59 +58,21 @@
 sector papers, volumes, prediction papers, mathematical closure documents, and supporting 
 research. All documents are authored by Clint Jefferys.</p>
 
-<p>UN Theory — The Unified Information Substrate is solely owned and authored by Clint 
-Jefferys and is not owned by CJ Consultancy Services Ltd. All documents are registered 
-copyright in the United Kingdom and the United States of America.</p>
-
-<h2>Public Access</h2>
-<p>This website provides access to the public overview and index of UN Theory, including:</p>
-
-<ul>
-<li>High‑level descriptions of each volume</li>
-<li>Sector paper summaries</li>
-<li>Public‑release documents</li>
-<li>DOI links to published material</li>
-</ul>
-
-<p>For the full document list, visit the <a href="un-theory-index.html">UN Theory Index</a>.</p>
-
-<h2>Author</h2>
-<p>UN Theory is authored by Clint Jefferys, an independent theoretical physics researcher 
-with a focus on correlation geometry, parity‑odd invariants, and emergent physical 
-structure.</p>
-
-<p>The public‑release documents are available through this website and through academic 
-repositories such as Zenodo.</p>
-
-<h2>Ownership & Copyright Disclaimer</h2>
-<p><strong>UN Theory — The Unified Information Substrate</strong> is solely owned, authored, and operated by 
-<strong>Clint Jefferys</strong>. It is an independent scientific research project and is <strong>not owned by, affiliated 
-with, or operated by CJ Consultancy Services Ltd</strong>.</p>
-
-<p>UN Theory — The Unified Information Substrate is <strong>registered copyright</strong> in the United Kingdom 
-and the United States of America.</p>
-
-<!-- ⭐⭐⭐ PADLOCK SYSTEM BELOW INTRO ⭐⭐⭐ -->
-
 <h2>Search the UN Theory Corpus</h2>
 
-<!-- FULL-WIDTH SEARCH BOX (FIXED) -->
 <div style="margin-bottom:20px;">
     <input type="text" id="searchBox" class="search-box"
            placeholder="DOI link appears here when selected…">
 </div>
 
-<!-- FULL-WIDTH DROPDOWN (FIXED) -->
 <select id="documentList" class="dropdown-box" size="14"></select>
 
-<!-- BUTTON ROW -->
 <div class="button-row">
     <a id="openZenodo" href="#" target="_blank">Open on Zenodo</a>
     <button id="copyDOI">Copy DOI</button>
     <button id="copyCitation">Copy Full Citation</button>
 </div>
 
-<!-- PADLOCK SYSTEM SCRIPT -->
 <script>
 // --- PUBLIC DOCUMENTS ---
 const publicDocs = [
