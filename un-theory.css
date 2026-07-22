@@ -1,5 +1,5 @@
 /* ============================================================
-   UN THEORY — COSMIC SITE CSS (FINAL CLEAN VERSION)
+   UN THEORY — COSMIC SITE CSS (FINAL PATCHED VERSION)
    ============================================================ */
 
 /* Base body + cosmic background */
@@ -9,30 +9,38 @@ body {
     font-family: Arial, sans-serif;
     background: url('copilot_image_1782117868506.jpeg') no-repeat center center fixed;
     background-size: cover;
+    background-attachment: fixed;
     color: #fff;
     line-height: 1.6;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Dark mode */
+/* Dark mode — KEEP cosmic background */
 body.dark {
-    background: #111 !important;
+    background: rgba(0,0,0,0.85) !important;
+    background-image: url('copilot_image_1782117868506.jpeg') !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
     color: #eee;
 }
 
 /* ============================================================
-   HEADER / LOGO BAND
+   HEADER / LOGO BAND — FIXED HEIGHT + NO SLIPPING
    ============================================================ */
 
 .logo-band {
     width: 100%;
+    height: 120px; /* LOCKED HEIGHT */
     background: rgba(0,0,0,0.65);
-    padding: 20px;
-    text-align: center;
+    backdrop-filter: blur(6px);
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-bottom: 2px solid #00aaff;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2000; /* ABOVE NAV */
 }
 
 .logo-band img {
@@ -41,15 +49,16 @@ body.dark {
 }
 
 /* ============================================================
-   NAVIGATION BAR
+   NAVIGATION BAR — FIXED OFFSET + NO SLIPPING
    ============================================================ */
 
 .main-nav {
     background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
     border-bottom: 2px solid #00aaff;
     position: sticky;
-    top: 80px;
-    z-index: 999;
+    top: 120px; /* MATCHES HEADER HEIGHT */
+    z-index: 1999; /* JUST BELOW HEADER */
 }
 
 .main-nav ul {
@@ -96,7 +105,7 @@ body.dark .dark-toggle {
 }
 
 /* ============================================================
-   MAIN CONTENT
+   MAIN CONTENT — FIX SLIPPING UNDER HEADER
    ============================================================ */
 
 main {
@@ -105,6 +114,8 @@ main {
     padding: 20px;
     background: rgba(0,0,0,0.55);
     border-radius: 10px;
+    position: relative;
+    z-index: 1;
 }
 
 /* ============================================================
@@ -191,4 +202,3 @@ body.dark .dropdown-box {
     border-top: 2px solid #00aaff;
     font-size: 0.9rem;
 }
-
