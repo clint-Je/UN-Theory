@@ -205,10 +205,11 @@ document.getElementById("copyDOI").onclick = () => {
     navigator.clipboard.writeText(opt.dataset.doi);
 };
 
-// --- Copy Citation ---
+// --- Copy Citation (FIXED) ---
 document.getElementById("copyCitation").onclick = () => {
     const opt = list.options[list.selectedIndex];
-    const citation = `${opt.textContent.replace("🔓 ","").replace("🔒 ","")}, DOI: ${opt.dataset.doi}`;
+    const cleanTitle = opt.textContent.replace("🔓 ","").replace("🔒 ","");
+    const citation = `Jefferys, C. (2026). ${cleanTitle}. DOI: ${opt.dataset.doi}`;
     navigator.clipboard.writeText(citation);
 };
 
