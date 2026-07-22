@@ -1,144 +1,189 @@
-/* ================================
-   UN THEORY — COSMIC RESEARCH STYLE
-   Unified CSS for all UN Theory pages
-   ================================ */
+/* ============================================================
+   UN THEORY — COSMIC SITE CSS (FULL FIXED VERSION)
+   ============================================================ */
 
-/* GLOBAL RESET */
-* {
+/* Cosmic Background */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', Arial, sans-serif;
-    color: #ffffff;
-    background: url('copilot_image_1782117868506.jpeg') no-repeat center center fixed;
+    font-family: Arial, sans-serif;
+    background: url('cosmic-bg.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: #fff;
     line-height: 1.6;
-    padding-bottom: 60px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* LOGO BAND */
+/* Dark Mode */
+body.dark {
+    background: #111;
+    color: #eee;
+}
+
+/* ============================================================
+   HEADER / LOGO BAND
+   ============================================================ */
+
 .logo-band {
     width: 100%;
-    background: rgba(0,0,0,0.75);
-    padding: 20px 0;
+    background: rgba(0,0,0,0.55);
+    padding: 20px;
     text-align: center;
     border-bottom: 2px solid #00aaff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo-band img {
-    max-width: 260px;
+    width: 140px;
+    height: auto;
 }
 
-/* NAVIGATION BAR */
+/* ============================================================
+   NAVIGATION BAR
+   ============================================================ */
+
 .main-nav {
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.65);
     border-bottom: 2px solid #00aaff;
+    position: sticky;
+    top: 120px;
+    z-index: 999;
 }
 
 .main-nav ul {
     list-style: none;
+    margin: 0;
+    padding: 10px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.main-nav li {
-    margin: 10px 15px;
+    gap: 20px;
+    align-items: center;
 }
 
 .main-nav a {
-    color: #00c8ff;
+    color: #00aaff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px;
-    padding: 8px 12px;
-    transition: 0.3s;
+    font-size: 1.1rem;
 }
 
 .main-nav a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #00c8ff;
+    color: #fff;
 }
 
-/* MAIN CONTENT */
+/* ============================================================
+   DARK MODE BUTTON (FIXED)
+   ============================================================ */
+
+.dark-toggle {
+    background: #222;
+    color: #fff;
+    padding: 8px 16px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark .dark-toggle {
+    background: #eee;
+    color: #000;
+    border-color: #999;
+}
+
+/* ============================================================
+   MAIN CONTENT
+   ============================================================ */
+
 main {
     max-width: 900px;
     margin: 40px auto;
-    background: rgba(0,0,0,0.65);
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #00aaff;
-    box-shadow: 0 0 20px rgba(0,170,255,0.4);
+    padding: 20px;
+    background: rgba(0,0,0,0.45);
+    border-radius: 10px;
 }
 
-main h1 {
-    font-size: 36px;
+/* ============================================================
+   SEARCH BOX + DROPDOWN (FULL WIDTH FIX)
+   ============================================================ */
+
+.search-box,
+.dropdown-box {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
     margin-bottom: 20px;
-    color: #00c8ff;
-    text-shadow: 0 0 12px #00aaff;
+    border-radius: 6px;
+    border: 1px solid #666;
+    background: rgba(0,0,0,0.3);
+    color: #fff;
 }
 
-main h2 {
-    font-size: 28px;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    color: #66d9ff;
+body.dark .search-box,
+body.dark .dropdown-box {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
 }
 
-main p {
-    font-size: 18px;
-    margin-bottom: 15px;
+/* ============================================================
+   PADLOCK COLOURS (GREEN / RED)
+   ============================================================ */
+
+.option-public {
+    color: #00ff00 !important;
+    font-weight: bold;
 }
 
-/* LINKS */
-a {
-    color: #66d9ff;
+.option-restricted {
+    color: #ff3333 !important;
+    font-weight: bold;
 }
 
-a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #66d9ff;
+.option-label {
+    background: #333;
+    color: #fff;
+    font-weight: bold;
 }
 
-/* BUTTONS */
+/* ============================================================
+   BUTTON ROW
+   ============================================================ */
+
 .button-row {
-    margin-top: 25px;
+    margin-top: 20px;
     display: flex;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .button-row a,
 .button-row button {
-    background: #00aaff;
-    color: #000;
+    background: #0066cc;
+    color: #fff;
     padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
     text-decoration: none;
     border: none;
+    border-radius: 6px;
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 1rem;
 }
 
 .button-row a:hover,
 .button-row button:hover {
-    background: #66d9ff;
-    color: #000;
-    box-shadow: 0 0 12px #00c8ff;
+    background: #0099ff;
 }
 
-/* FOOTER */
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
 .site-footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0,0,0,0.85);
-    color: #66d9ff;
+    margin-top: 40px;
+    background: rgba(0,0,0,0.55);
     border-top: 2px solid #00aaff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
