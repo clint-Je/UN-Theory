@@ -2,12 +2,12 @@
    UN THEORY — COSMIC SITE CSS (FINAL CLEAN VERSION)
    ============================================================ */
 
-/* Base body */
+/* Base body + cosmic background */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url('cosmic-bg.jpg') no-repeat center center fixed;
+    background: url('copilot_image_1782117868506.jpeg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     line-height: 1.6;
@@ -16,7 +16,7 @@ body {
 
 /* Dark mode */
 body.dark {
-    background: #111;
+    background: #111 !important;
     color: #eee;
 }
 
@@ -48,7 +48,7 @@ body.dark {
     background: rgba(0,0,0,0.75);
     border-bottom: 2px solid #00aaff;
     position: sticky;
-    top: 80px; /* sits just under logo-band */
+    top: 80px;
     z-index: 999;
 }
 
@@ -77,7 +77,7 @@ body.dark {
     border-bottom: 2px solid #00aaff;
 }
 
-/* Dark mode button in nav */
+/* Dark mode button */
 .dark-toggle {
     background: #222;
     color: #fff;
@@ -107,16 +107,6 @@ main {
     border-radius: 10px;
 }
 
-/* Headings */
-h1, h2 {
-    margin-top: 0;
-}
-
-/* Lists */
-ul {
-    margin-left: 20px;
-}
-
 /* ============================================================
    SEARCH BOX + DROPDOWN
    ============================================================ */
@@ -134,11 +124,6 @@ ul {
     box-sizing: border-box;
 }
 
-.dropdown-box {
-    height: auto;
-}
-
-/* Dark mode variants */
 body.dark .search-box,
 body.dark .dropdown-box {
     background: rgba(255,255,255,0.12);
@@ -150,12 +135,12 @@ body.dark .dropdown-box {
    ============================================================ */
 
 .option-public {
-    color: #00ff00 !important; /* bright green */
+    color: #00ff00 !important;
     font-weight: bold;
 }
 
 .option-restricted {
-    color: #ff3333 !important; /* bright red */
+    color: #ff3333 !important;
     font-weight: bold;
 }
 
@@ -206,16 +191,3 @@ body.dark .dropdown-box {
     border-top: 2px solid #00aaff;
     font-size: 0.9rem;
 }
-
-/* FORCE cosmic background to override any other CSS */
-body {
-    background: url('copilot_image_1782117868506.jpeg') no-repeat center center fixed !important;
-    background-size: cover !important;
-}
-
-
-
-
-
-
-
