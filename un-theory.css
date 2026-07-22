@@ -1,8 +1,8 @@
 /* ============================================================
-   UN THEORY — COSMIC SITE CSS (FULL FIXED VERSION)
+   UN THEORY — COSMIC SITE CSS (FINAL CLEAN VERSION)
    ============================================================ */
 
-/* Cosmic Background */
+/* Base body */
 body {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Dark Mode */
+/* Dark mode */
 body.dark {
     background: #111;
     color: #eee;
@@ -26,7 +26,7 @@ body.dark {
 
 .logo-band {
     width: 100%;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.65);
     padding: 20px;
     text-align: center;
     border-bottom: 2px solid #00aaff;
@@ -45,17 +45,17 @@ body.dark {
    ============================================================ */
 
 .main-nav {
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.75);
     border-bottom: 2px solid #00aaff;
     position: sticky;
-    top: 120px;
+    top: 80px; /* sits just under logo-band */
     z-index: 999;
 }
 
 .main-nav ul {
     list-style: none;
     margin: 0;
-    padding: 10px;
+    padding: 10px 20px;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -65,26 +65,28 @@ body.dark {
     color: #00aaff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .main-nav a:hover {
     color: #fff;
 }
 
-/* ============================================================
-   DARK MODE BUTTON (FIXED)
-   ============================================================ */
+.main-nav a.active {
+    color: #fff;
+    border-bottom: 2px solid #00aaff;
+}
 
+/* Dark mode button in nav */
 .dark-toggle {
     background: #222;
     color: #fff;
     padding: 8px 16px;
     border: 1px solid #555;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body.dark .dark-toggle {
@@ -101,43 +103,59 @@ main {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.55);
     border-radius: 10px;
 }
 
+/* Headings */
+h1, h2 {
+    margin-top: 0;
+}
+
+/* Lists */
+ul {
+    margin-left: 20px;
+}
+
 /* ============================================================
-   SEARCH BOX + DROPDOWN (FULL WIDTH FIX)
+   SEARCH BOX + DROPDOWN
    ============================================================ */
 
 .search-box,
 .dropdown-box {
     width: 100%;
     padding: 12px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     margin-bottom: 20px;
     border-radius: 6px;
     border: 1px solid #666;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.4);
     color: #fff;
+    box-sizing: border-box;
 }
 
+.dropdown-box {
+    height: auto;
+}
+
+/* Dark mode variants */
 body.dark .search-box,
 body.dark .dropdown-box {
-    background: rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.12);
     color: #fff;
 }
 
 /* ============================================================
-   PADLOCK COLOURS (GREEN / RED)
+   PADLOCK COLOURS
    ============================================================ */
 
 .option-public {
-    color: #00ff00 !important;
+    color: #00ff00 !important; /* bright green */
     font-weight: bold;
 }
 
 .option-restricted {
-    color: #ff3333 !important;
+    color: #ff3333 !important; /* bright red */
     font-weight: bold;
 }
 
@@ -168,7 +186,7 @@ body.dark .dropdown-box {
     border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .button-row a:hover,
@@ -184,6 +202,7 @@ body.dark .dropdown-box {
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.65);
     border-top: 2px solid #00aaff;
+    font-size: 0.9rem;
 }
