@@ -1,5 +1,5 @@
 /* ============================================================
-   UN THEORY — COSMIC SITE CSS (FINAL PATCHED VERSION)
+   UN THEORY — COSMIC SITE CSS (FINAL REGENERATED VERSION)
    ============================================================ */
 
 /* Base body + cosmic background */
@@ -17,7 +17,6 @@ body {
 
 /* Dark mode — KEEP cosmic background */
 body.dark {
-    background: rgba(0,0,0,0.85) !important;
     background-image: url('copilot_image_1782117868506.jpeg') !important;
     background-size: cover !important;
     background-attachment: fixed !important;
@@ -25,14 +24,13 @@ body.dark {
 }
 
 /* ============================================================
-   HEADER / LOGO BAND — FIXED HEIGHT + NO SLIPPING
+   HEADER / LOGO BAND — SOLID, WIDE, NON-TRANSPARENT
    ============================================================ */
 
 .logo-band {
     width: 100%;
-    height: 120px; /* LOCKED HEIGHT */
-    background: rgba(0,0,0,0.65);
-    backdrop-filter: blur(6px);
+    height: 140px; /* FIXED HEIGHT */
+    background: #111; /* SOLID DARK GREY */
     padding: 0;
     display: flex;
     justify-content: center;
@@ -40,41 +38,40 @@ body.dark {
     border-bottom: 2px solid #00aaff;
     position: sticky;
     top: 0;
-    z-index: 2000; /* ABOVE NAV */
+    z-index: 3000;
 }
 
 .logo-band img {
-    width: 140px;
+    width: 160px;
     height: auto;
 }
 
 /* ============================================================
-   NAVIGATION BAR — FIXED OFFSET + NO SLIPPING
+   NAVIGATION BAR — STRONGER, SOLID, NO SLIPPING
    ============================================================ */
 
 .main-nav {
-    background: rgba(0,0,0,0.75);
-    backdrop-filter: blur(6px);
+    background: #000; /* SOLID BLACK */
     border-bottom: 2px solid #00aaff;
     position: sticky;
-    top: 120px; /* MATCHES HEADER HEIGHT */
-    z-index: 1999; /* JUST BELOW HEADER */
+    top: 140px; /* MATCHES HEADER HEIGHT */
+    z-index: 2500;
 }
 
 .main-nav ul {
     list-style: none;
     margin: 0;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: flex;
-    gap: 20px;
+    gap: 22px;
     align-items: center;
 }
 
 .main-nav a {
-    color: #00aaff;
+    color: #00ccff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.05rem;
 }
 
 .main-nav a:hover {
@@ -88,117 +85,76 @@ body.dark {
 
 /* Dark mode button */
 .dark-toggle {
-    background: #222;
+    background: #333;
     color: #fff;
-    padding: 8px 16px;
-    border: 1px solid #555;
+    padding: 10px 18px;
+    border: 1px solid #00aaff;
     border-radius: 6px;
-    font-size: 0.95rem;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body.dark .dark-toggle {
-    background: #eee;
+    background: #ddd;
     color: #000;
-    border-color: #999;
+    border-color: #00aaff;
 }
 
 /* ============================================================
-   MAIN CONTENT — FIX SLIPPING UNDER HEADER
+   MAIN CONTENT — STRONGER CONTRAST, READABLE
    ============================================================ */
 
 main {
     max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(0,0,0,0.55);
-    border-radius: 10px;
+    margin: 60px auto 160px auto; /* EXTRA BOTTOM SPACE FOR FIXED FOOTER */
+    padding: 30px;
+    background: rgba(0,0,0,0.70);
+    border-radius: 12px;
+    color: #fff;
     position: relative;
     z-index: 1;
 }
 
 /* ============================================================
-   SEARCH BOX + DROPDOWN
+   EXPLORE BUTTONS — HIGH VISIBILITY
    ============================================================ */
 
-.search-box,
-.dropdown-box {
-    width: 100%;
-    padding: 12px;
-    font-size: 1.05rem;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    border: 1px solid #666;
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    box-sizing: border-box;
-}
-
-body.dark .search-box,
-body.dark .dropdown-box {
-    background: rgba(255,255,255,0.12);
-    color: #fff;
-}
-
-/* ============================================================
-   PADLOCK COLOURS
-   ============================================================ */
-
-.option-public {
-    color: #00ff00 !important;
-    font-weight: bold;
-}
-
-.option-restricted {
-    color: #ff3333 !important;
-    font-weight: bold;
-}
-
-.option-label {
-    background: #333;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* ============================================================
-   BUTTON ROW
-   ============================================================ */
-
-.button-row {
-    margin-top: 20px;
+.explore-buttons {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 25px;
 }
 
-.button-row a,
-.button-row button {
+.explore-buttons a {
     background: #0066cc;
-    color: #fff;
-    padding: 10px 20px;
+    color: #fff !important;
+    padding: 14px 20px;
     text-decoration: none;
-    border: none;
     border-radius: 6px;
     font-weight: bold;
-    cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
 }
 
-.button-row a:hover,
-.button-row button:hover {
+.explore-buttons a:hover {
     background: #0099ff;
 }
 
 /* ============================================================
-   FOOTER
+   FOOTER — PINNED TO BOTTOM WITH SOLID BAND
    ============================================================ */
 
 .site-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background: rgba(0,0,0,0.65);
+    width: 100%;
+    background: rgba(0,0,0,0.85);
     border-top: 2px solid #00aaff;
+    padding: 20px;
+    text-align: center;
     font-size: 0.9rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
 }
