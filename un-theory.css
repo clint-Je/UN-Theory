@@ -74,7 +74,7 @@ body {
 /* MAIN CONTENT */
 main {
     max-width: 900px;
-    margin: 60px auto 160px auto;
+    margin: 0 auto 160px auto;   /* removed the 60px top margin */
     padding: 30px;
     background: rgba(0,0,0,0.75);
     border-radius: 12px;
