@@ -94,3 +94,21 @@ main {
     left: 0;
     z-index: 2000;
 }
+/* ============================================================
+   FORCE NAV BAR TO BE FIXED — OVERRIDES ALL PREVIOUS RULES
+   ============================================================ */
+
+.main-nav {
+    position: fixed !important;   /* FORCE FIXED */
+    top: 0 !important;            /* ALWAYS AT TOP */
+    left: 0;
+    width: 100%;
+    background: #000;
+    border-bottom: 3px solid #00aaff;
+    z-index: 9999 !important;     /* ABOVE HEADER */
+}
+
+/* Push page down so nav bar doesn't cover content */
+body {
+    padding-top: 70px !important;
+}
