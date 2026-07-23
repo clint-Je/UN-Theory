@@ -1,5 +1,5 @@
 /* ============================================================
-   UN THEORY — COSMIC SITE CSS (FINAL VERSION, PINNED NAV)
+   UN THEORY — COSMIC SITE CSS (FIXED HEADER + FIXED NAV BAR)
    ============================================================ */
 
 /* Base body + cosmic background */
@@ -13,22 +13,27 @@ body {
     color: #fff;
     line-height: 1.6;
 
-    /* add space for pinned header + nav */
-    padding-top: 260px; /* 200 header + ~60 nav */
+    /* FIX FOR DISAPPEARING BUTTONS */
+    padding-top: 260px; /* header (200px) + nav (60px) */
 }
 
-/* HEADER / LOGO BAND — SAME AS BEFORE */
+/* ============================================================
+   HEADER / LOGO BAND — FIXED
+   ============================================================ */
+
 .logo-band {
     width: 100%;
-    height: 200px; /* TALLER HEADER SO LOGO FITS */
-    background: #222; /* SOLID DARK GREY */
-    padding: 20px 0; /* EXTRA SPACE FOR LOGO */
+    height: 200px;
+    background: #222;
+    padding: 20px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom: 3px solid #00aaff;
-    position: fixed;   /* PINNED */
+
+    position: fixed;
     top: 0;
+    left: 0;
     z-index: 3000;
 }
 
@@ -37,12 +42,16 @@ body {
     height: auto;
 }
 
-/* NAVIGATION BAR — ONLY CHANGE: sticky → fixed */
+/* ============================================================
+   NAVIGATION BAR — FIXED UNDER HEADER
+   ============================================================ */
+
 .main-nav {
-    background: #000; /* SOLID BLACK */
+    background: #000;
     border-bottom: 3px solid #00aaff;
-    position: fixed;      /* PINNED, NOT STICKY */
-    top: 200px;           /* SITS UNDER HEADER */
+
+    position: fixed;
+    top: 200px; /* sits directly under header */
     left: 0;
     width: 100%;
     z-index: 2500;
@@ -73,16 +82,22 @@ body {
     border-bottom: 2px solid #00aaff;
 }
 
-/* MAIN CONTENT — UNCHANGED */
+/* ============================================================
+   MAIN CONTENT — STRONG CONTRAST, READABLE
+   ============================================================ */
+
 main {
     max-width: 900px;
-    margin: 0 auto 160px auto; /* SPACE FOR FIXED FOOTER */
+    margin: 0 auto 160px auto;
     padding: 30px;
     background: rgba(0,0,0,0.75);
     border-radius: 12px;
 }
 
-/* FOOTER — PINNED TO BOTTOM */
+/* ============================================================
+   FOOTER — PINNED TO BOTTOM
+   ============================================================ */
+
 .site-footer {
     width: 100%;
     background: rgba(0,0,0,0.85);
@@ -90,6 +105,7 @@ main {
     padding: 20px;
     text-align: center;
     font-size: 0.9rem;
+
     position: fixed;
     bottom: 0;
     left: 0;
